@@ -682,6 +682,83 @@ a{color:inherit;text-decoration:none}
   .main{padding:62px 12px 50px}
   .sub-grid,.cfg-grid,.conn-grid{grid-template-columns:1fr}
 }
+/* ══════ نسخه و بروزرسانی — دیزاین جدید ══════ */
+.upd-hero{background:linear-gradient(150deg,var(--bg3) 0%,var(--card) 65%);border:1px solid var(--card-b);border-radius:24px;padding:26px 26px 22px;position:relative;overflow:hidden;box-shadow:var(--shadow);margin-bottom:16px}
+.upd-hero-glow{position:absolute;top:-70px;left:-70px;width:260px;height:260px;background:radial-gradient(circle,rgba(59,130,246,.14),transparent 70%);pointer-events:none}
+.upd-hero-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;position:relative;z-index:1;flex-wrap:wrap;margin-bottom:14px}
+.upd-hero-cur{display:flex;align-items:center;gap:14px}
+.upd-hero-icon{width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;flex-shrink:0;box-shadow:0 8px 22px rgba(59,130,246,.35)}
+.upd-hero-label{font-size:10.5px;color:var(--t3);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.upd-hero-ver{font-size:26px;font-weight:800;color:var(--t1);letter-spacing:-.02em}
+.upd-hero-desc{font-size:12.5px;color:var(--t2);line-height:1.8;position:relative;z-index:1;margin-bottom:14px;background:rgba(0,0,0,.14);border:1px solid var(--card-b);border-radius:12px;padding:12px 14px}
+[data-theme="light"] .upd-hero-desc{background:rgba(37,99,235,.03)}
+.upd-hero-meta{display:flex;gap:8px;flex-wrap:wrap;position:relative;z-index:1}
+.upd-meta-chip{display:flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;color:var(--t2);background:var(--accent-d);border:1px solid var(--card-b);padding:6px 12px;border-radius:20px}
+.upd-meta-chip i{color:var(--accent);font-size:13px}
+.upd-pill{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800;padding:6px 14px;border-radius:20px}
+.upd-pill-blue{background:var(--accent-d);color:var(--accent2)}
+.upd-pill-green{background:var(--green-bg);color:var(--green-t)}
+.upd-pill-amber{background:var(--amber-bg);color:var(--amber-t)}
+.upd-dot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:pulse 1.6s infinite}
+
+.upd-latest-card{background:linear-gradient(120deg,var(--amber) 0%,#D97706 100%);border-radius:22px;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:16px;box-shadow:0 12px 32px rgba(245,158,11,.28);position:relative;overflow:hidden}
+.upd-latest-card::before{content:'';position:absolute;top:-40px;left:-40px;width:180px;height:180px;background:radial-gradient(circle,rgba(255,255,255,.18),transparent 70%);pointer-events:none}
+.upd-latest-left{display:flex;align-items:center;gap:14px;position:relative;z-index:1;min-width:220px}
+.upd-latest-icon{width:48px;height:48px;border-radius:14px;background:rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;flex-shrink:0}
+.upd-latest-title{font-size:13px;font-weight:800;color:#fff;opacity:.92}
+.upd-latest-ver{font-size:18px;font-weight:800;color:#fff;margin-top:2px}
+.upd-latest-desc{font-size:11.5px;color:rgba(255,255,255,.88);margin-top:4px;line-height:1.7;max-width:440px}
+.upd-install-btn{background:#fff;color:#B45309;border:none;border-radius:14px;padding:13px 24px;font-family:inherit;font-size:13.5px;font-weight:800;cursor:pointer;display:flex;align-items:center;gap:8px;box-shadow:0 6px 18px rgba(0,0,0,.18);transition:.18s;position:relative;z-index:1;white-space:nowrap}
+.upd-install-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.24)}
+.upd-install-btn:active{transform:translateY(0) scale(.98)}
+.upd-install-btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
+
+.upd-progress-card{background:var(--card);border:1px solid var(--card-b);border-radius:18px;padding:18px 20px;margin-bottom:16px;box-shadow:var(--shadow)}
+.upd-progress-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.upd-progress-icon{width:38px;height:38px;border-radius:11px;background:var(--accent-d);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.upd-progress-title{font-size:13px;font-weight:800;color:var(--t1)}
+.upd-progress-txt{font-size:10.5px;color:var(--t3);margin-top:2px}
+.upd-progress-pct{font-size:16px;font-weight:800;color:var(--accent2);flex-shrink:0}
+.upd-progress-track{height:8px;border-radius:6px;background:var(--accent-d);overflow:hidden}
+.upd-progress-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .4s ease;position:relative;overflow:hidden}
+.upd-progress-fill::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);width:40%;animation:shimmer 1.6s linear infinite}
+
+.upd-log-card{background:var(--card);border:1px solid var(--card-b);border-radius:18px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow)}
+.upd-log-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.upd-log-title{font-size:12.5px;font-weight:800;color:var(--t1);display:flex;align-items:center;gap:7px}
+.upd-log-title i{color:var(--accent);font-size:16px}
+.upd-log-box{background:rgba(0,0,0,.3);border:1px solid var(--card-b);border-radius:12px;padding:14px 16px;max-height:240px;overflow-y:auto;font-family:ui-monospace,monospace;font-size:10.5px;line-height:2}
+[data-theme="light"] .upd-log-box{background:rgba(0,0,0,.03)}
+.upd-log-empty{color:var(--t3)}
+.upd-log-line{color:var(--t2);white-space:pre-wrap;word-break:break-all}
+.upd-log-line.err{color:var(--red-t)}
+.upd-log-line.ok{color:var(--green-t)}
+
+.upd-history-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.upd-history-title{font-size:13px;font-weight:800;color:var(--t1);display:flex;align-items:center;gap:7px}
+.upd-history-title i{color:var(--accent);font-size:17px}
+
+.upd-timeline{position:relative;display:flex;flex-direction:column;gap:0}
+.upd-timeline::before{content:'';position:absolute;top:8px;bottom:8px;right:19px;width:2px;background:linear-gradient(180deg,var(--card-b),transparent)}
+.upd-item{display:flex;gap:16px;padding:0 0 20px;position:relative}
+.upd-item:last-child{padding-bottom:0}
+.upd-item-dot-wrap{position:relative;z-index:1;flex-shrink:0}
+.upd-item-dot{width:40px;height:40px;border-radius:13px;background:var(--card);border:2px solid var(--green);display:flex;align-items:center;justify-content:center;color:var(--green-t);font-size:17px;box-shadow:var(--shadow)}
+.upd-item.err .upd-item-dot{border-color:var(--red);color:var(--red-t)}
+.upd-item-card{flex:1;background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:14px 17px;transition:.18s;min-width:0}
+.upd-item-card:hover{border-color:var(--card-bh);transform:translateY(-1px)}
+.upd-item-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.upd-item-versions{font-size:13.5px;font-weight:800;color:var(--t1);display:flex;align-items:center;gap:8px}
+.upd-item-versions .arrow{color:var(--t3);font-size:14px}
+.upd-item-versions .to{color:var(--accent2)}
+.upd-item-time{font-size:10px;color:var(--t3);display:flex;align-items:center;gap:5px;white-space:nowrap}
+.upd-item-desc{font-size:11.5px;color:var(--t2);line-height:1.8;margin-top:6px}
+.upd-item-badge{font-size:9px;font-weight:800;padding:3px 9px;border-radius:20px;flex-shrink:0}
+.upd-item-badge.ok{background:var(--green-bg);color:var(--green-t)}
+.upd-item-badge.err{background:var(--red-bg);color:var(--red-t)}
+.upd-item-err-box{margin-top:8px;background:var(--red-bg);border:1px solid rgba(239,68,68,.2);border-radius:9px;padding:8px 11px;font-size:10.5px;color:var(--red-t);font-family:ui-monospace,monospace;word-break:break-all}
+.upd-history-empty{text-align:center;padding:50px 20px;color:var(--t3);background:var(--card);border:1px dashed var(--card-b);border-radius:18px}
+.upd-history-empty i{font-size:36px;opacity:.35;margin-bottom:10px;display:block}
 </style>
 </head>
 <body>
@@ -699,7 +776,7 @@ a{color:inherit;text-decoration:none}
     <div class="modal-v2-body">
       <div class="cl amber" style="margin-top:0">
         <i class="ti ti-alert-triangle"></i>
-        <span>به تازگی فردی اقدام به کپی‌برداری غیرمجاز از سورس‌کد این پروژه نموده و آن را تحت عنوان «X4G» بازنشر کرده است. این اقدام، نقض آشکار حقوق مالکیت معنوی (کپی‌رایت) پروژه‌ی RVG Gateway محسوب می‌شود.</span>
+        <span>به تازگی فردی اقدام به کپی‌برداری غیرمجاز از سورس‌کد این پروژه نموده و آن را تحت عنوان «X4G» بازنشر کرده است این اقدام، نقض آشکار حقوق مالکیت معنوی (کپی‌رایت) پروژه‌ی RVG Gateway محسوب می‌شود</span>
       </div>
       <div class="cl" style="margin-top:10px">
         <i class="ti ti-info-circle"></i>
@@ -817,6 +894,7 @@ a{color:inherit;text-decoration:none}
     <div class="nav-it" data-pg="traffic"><i class="ti ti-chart-area"></i> ترافیک</div>
     <div class="nav-it" data-pg="connections"><i class="ti ti-plug-connected"></i> اتصالات <span class="nav-badge" id="conns-nb">0</span></div>
     <div class="nav-sec">سیستم</div>
+    <div class="nav-it" data-pg="updates"><i class="ti ti-cloud-download"></i> نسخه و بروزرسانی <span class="nav-badge" id="update-nb" style="display:none">1</span></div>
     <div class="nav-it" data-pg="security"><i class="ti ti-shield-lock"></i> امنیت</div>
     <div class="nav-it" data-pg="logs"><i class="ti ti-history"></i> لاگ فعالیت‌ها</div>
     <div class="nav-it" data-pg="errors"><i class="ti ti-alert-triangle"></i> خطاها</div>
@@ -1139,6 +1217,77 @@ a{color:inherit;text-decoration:none}
     </div>
   </div>
 </section>
+<section class="pg" id="pg-updates">
+  <div class="topbar">
+    <div><div class="tb-title"><i class="ti ti-cloud-download"></i> نسخه و بروزرسانی</div><div class="tb-sub">مدیریت نسخه‌ی پنل و تاریخچه‌ی کامل بروزرسانی‌ها</div></div>
+    <div class="tb-right"><button class="btn btn-p btn-sm" onclick="loadVersion()"><i class="ti ti-refresh"></i> بررسی مجدد</button></div>
+  </div>
+
+  <div class="upd-hero" id="upd-hero">
+    <div class="upd-hero-glow"></div>
+    <div class="upd-hero-top">
+      <div class="upd-hero-cur">
+        <div class="upd-hero-icon"><i class="ti ti-package"></i></div>
+        <div>
+          <div class="upd-hero-label">نسخه‌ی نصب‌شده</div>
+          <div class="upd-hero-ver" id="ver-current">—</div>
+        </div>
+      </div>
+      <div class="upd-hero-status" id="ver-status-badge">
+        <span class="upd-pill upd-pill-blue"><span class="upd-dot"></span> در حال بررسی...</span>
+      </div>
+    </div>
+    <div class="upd-hero-desc" id="ver-current-desc">—</div>
+    <div class="upd-hero-meta">
+      <span class="upd-meta-chip"><i class="ti ti-brand-github"></i> <span id="ver-repo">—</span></span>
+      <span class="upd-meta-chip"><i class="ti ti-git-branch"></i> <span id="ver-branch">—</span></span>
+    </div>
+  </div>
+
+  <div class="upd-latest-card" id="upd-latest-card" style="display:none">
+    <div class="upd-latest-left">
+      <div class="upd-latest-icon"><i class="ti ti-sparkles"></i></div>
+      <div>
+        <div class="upd-latest-title">نسخه‌ی جدید موجود است</div>
+        <div class="upd-latest-ver">نسخه‌ی <span id="ver-latest-num">—</span></div>
+        <div class="upd-latest-desc" id="ver-latest-desc">—</div>
+      </div>
+    </div>
+    <button class="upd-install-btn" id="update-btn" onclick="startUpdate()">
+      <i class="ti ti-download"></i> نصب بروزرسانی
+    </button>
+  </div>
+
+  <div class="upd-progress-card" id="update-progress-wrap" style="display:none">
+    <div class="upd-progress-head">
+      <div class="upd-progress-icon"><i class="ti ti-loader-2" style="animation:spin 1s linear infinite"></i></div>
+      <div style="flex:1">
+        <div class="upd-progress-title">در حال نصب بروزرسانی...</div>
+        <div class="upd-progress-txt" id="update-progress-txt">در حال آماده‌سازی...</div>
+      </div>
+      <div class="upd-progress-pct" id="update-progress-pct">0%</div>
+    </div>
+    <div class="upd-progress-track"><div class="upd-progress-fill" id="update-progress-bar" style="width:0%"></div></div>
+  </div>
+
+  <div class="upd-log-card">
+    <div class="upd-log-head">
+      <div class="upd-log-title"><i class="ti ti-terminal-2"></i> لاگ زنده‌ی نصب</div>
+      <button class="btn btn-o btn-sm" onclick="loadUpdateLog()"><i class="ti ti-refresh"></i> بروزرسانی لاگ</button>
+    </div>
+    <div class="upd-log-box" id="update-log-box">
+      <p class="upd-log-empty">لاگی موجود نیست</p>
+    </div>
+  </div>
+
+  <div class="upd-history-head">
+    <div class="upd-history-title"><i class="ti ti-history"></i> تاریخچه‌ی بروزرسانی‌ها</div>
+    <span class="badge bg-blue" id="upd-history-count">۰ مورد</span>
+  </div>
+  <div class="upd-timeline" id="upd-history-list">
+    <div class="upd-history-empty"><i class="ti ti-history-toggle"></i><p>هنوز هیچ بروزرسانی‌ای ثبت نشده</p></div>
+  </div>
+</section>
 <section class="pg" id="pg-settings">
   <div class="topbar"><div><div class="tb-title"><i class="ti ti-settings"></i> تنظیمات</div></div></div>
   <div class="g2">
@@ -1263,8 +1412,7 @@ overlay.addEventListener('click',closeSb);
 function navTo(name){
   document.querySelectorAll('.nav-it').forEach(n=>n.classList.toggle('on',n.dataset.pg===name));
   document.querySelectorAll('.pg').forEach(p=>p.classList.toggle('on',p.id==='pg-'+name));
-  const loaders={links:loadLinks,connections:loadConns,errors:loadErrs,subscriptions:loadSubsPage,subgroups:loadSubs,logs:loadActivity};
-  if(loaders[name])loaders[name]();
+const loaders={links:loadLinks,connections:loadConns,errors:loadErrs,subscriptions:loadSubsPage,subgroups:loadSubs,logs:loadActivity,updates:loadVersion};  if(loaders[name])loaders[name]();
   closeSb();window.scrollTo({top:0,behavior:'smooth'});
 }
 document.querySelectorAll('.nav-it').forEach(el=>el.addEventListener('click',()=>navTo(el.dataset.pg)));
@@ -1810,8 +1958,139 @@ document.addEventListener('DOMContentLoaded',async()=>{
     if(document.getElementById('pg-subscriptions').classList.contains('on'))loadSubsPage();
     if(document.getElementById('pg-connections').classList.contains('on'))loadConns();
     if(document.getElementById('pg-logs').classList.contains('on'))loadActivity();
+    loadVersion();
   },5000);
 });
+
+function timeAgoFa(ts){
+  const diff = Math.max(0, (Date.now()/1000) - ts);
+  if(diff < 60) return 'همین الان';
+  if(diff < 3600) return toFa(Math.floor(diff/60))+' دقیقه پیش';
+  if(diff < 86400) return toFa(Math.floor(diff/3600))+' ساعت پیش';
+  if(diff < 2592000) return toFa(Math.floor(diff/86400))+' روز پیش';
+  return new Date(ts*1000).toLocaleDateString('fa-IR');
+}
+
+async function loadVersion(){
+  try{
+    const r=await authF('/api/version'),d=await r.json();
+    const cur=d.current||{}, lat=d.latest||{};
+
+    document.getElementById('ver-current').textContent=cur.version||'—';
+    document.getElementById('ver-current-desc').textContent=cur.description||'بدون توضیحات ثبت‌شده برای این نسخه';
+    document.getElementById('ver-repo').textContent=d.repo||'تنظیم نشده';
+    document.getElementById('ver-branch').textContent=d.branch||'—';
+
+    const badge=document.getElementById('ver-status-badge'), nb=document.getElementById('update-nb');
+    const latestCard=document.getElementById('upd-latest-card');
+
+    if(lat.error){
+      badge.innerHTML='<span class="upd-pill upd-pill-amber"><i class="ti ti-alert-triangle"></i> '+esc(lat.error)+'</span>';
+      latestCard.style.display='none';
+      nb.style.display='none';
+    }else if(d.update_available){
+      badge.innerHTML='<span class="upd-pill upd-pill-amber"><span class="upd-dot"></span> بروزرسانی جدید موجود است</span>';
+      document.getElementById('ver-latest-num').textContent=lat.version||'—';
+      document.getElementById('ver-latest-desc').textContent=lat.description||'بدون توضیحات';
+      latestCard.style.display='flex';
+      nb.style.display='inline-flex';nb.textContent='1';
+    }else{
+      badge.innerHTML='<span class="upd-pill upd-pill-green"><i class="ti ti-circle-check"></i> پنل بروز است</span>';
+      latestCard.style.display='none';
+      nb.style.display='none';
+    }
+  }catch(e){console.error(e)}
+  loadUpdateHistory();
+}
+
+let updatePolling=null, pollTicks=0;
+async function startUpdate(){
+  if(!confirm('نصب بروزرسانی سرور را چند ثانیه ری‌استارت می‌کند. ادامه می‌دهید؟'))return;
+  const btn=document.getElementById('update-btn');
+  btn.disabled=true;btn.innerHTML='<i class="ti ti-loader-2" style="animation:spin 1s linear infinite"></i> در حال نصب...';
+  document.getElementById('update-progress-wrap').style.display='block';
+  pollTicks=0;
+  try{
+    await authF('/api/update',{method:'POST'});
+    toast('بروزرسانی شروع شد','ok');
+    updatePolling=setInterval(pollUpdate,900);
+  }catch(e){
+    toast('خطا در شروع بروزرسانی','err');
+    btn.disabled=false;btn.innerHTML='<i class="ti ti-download"></i> نصب بروزرسانی';
+  }
+}
+async function pollUpdate(){
+  pollTicks++;
+  try{
+    const r=await fetch('/api/update-log',{credentials:'include'});
+    if(r.status===401){clearInterval(updatePolling);location.reload();return}
+    const d=await r.json();
+    document.getElementById('update-progress-bar').style.width=d.progress+'%';
+    document.getElementById('update-progress-pct').textContent=d.progress+'%';
+    renderUpdateLog(d.logs);
+    if(d.logs && d.logs.length) document.getElementById('update-progress-txt').textContent=d.logs[d.logs.length-1].msg;
+
+    if(!d.running && d.progress>=100){
+      document.getElementById('update-progress-txt').textContent='بروزرسانی کامل شد؛ در حال اتصال مجدد...';
+      clearInterval(updatePolling);
+      let tries=0;
+      const reconnect=setInterval(async()=>{
+        tries++;
+        try{const rr=await fetch('/api/me',{credentials:'include'});if(rr.ok){clearInterval(reconnect);location.reload();}}catch(e){}
+        if(tries>40)clearInterval(reconnect);
+      },2000);
+    }else if(!d.running && pollTicks>3){
+      document.getElementById('update-progress-txt').textContent='بروزرسانی متوقف شد (خطا) — لاگ را ببینید';
+      document.getElementById('update-btn').disabled=false;
+      document.getElementById('update-btn').innerHTML='<i class="ti ti-download"></i> نصب بروزرسانی';
+      clearInterval(updatePolling);
+    }
+  }catch(e){}
+}
+async function loadUpdateLog(){
+  try{const r=await authF('/api/update-log'),d=await r.json();renderUpdateLog(d.logs);}catch(e){}
+}
+function renderUpdateLog(logs){
+  const box=document.getElementById('update-log-box');
+  if(!logs||!logs.length){box.innerHTML='<p class="upd-log-empty">لاگی موجود نیست</p>';return}
+  box.innerHTML=logs.map(l=>{
+    const cls = l.msg.includes('❌') ? 'err' : (l.msg.includes('✅') ? 'ok' : '');
+    return `<p class="upd-log-line ${cls}">[${new Date(l.time*1000).toLocaleTimeString('fa-IR')}] ${esc(l.msg)}</p>`;
+  }).join('');
+  box.scrollTop=box.scrollHeight;
+}
+async function loadUpdateHistory(){
+  try{
+    const r=await authF('/api/update-history'),d=await r.json();
+    const hist=d.history||[];
+    document.getElementById('upd-history-count').textContent=toFa(hist.length)+' مورد';
+    const el=document.getElementById('upd-history-list');
+    if(!hist.length){
+      el.innerHTML='<div class="upd-history-empty"><i class="ti ti-history-toggle"></i><p>هنوز هیچ بروزرسانی‌ای ثبت نشده</p></div>';
+      return;
+    }
+    el.innerHTML=hist.map(h=>{
+      const isErr = h.status==='err';
+      return `
+      <div class="upd-item ${isErr?'err':''}">
+        <div class="upd-item-dot-wrap"><div class="upd-item-dot"><i class="ti ${isErr?'ti-x':'ti-check'}"></i></div></div>
+        <div class="upd-item-card">
+          <div class="upd-item-head">
+            <div class="upd-item-versions">
+              <span>${esc(h.from_version||'—')}</span>
+              <i class="ti ti-arrow-left arrow"></i>
+              <span class="to">${esc(h.to_version||'—')}</span>
+            </div>
+            <span class="upd-item-badge ${isErr?'err':'ok'}">${isErr?'ناموفق':'موفق'}</span>
+          </div>
+          <div class="upd-item-time"><i class="ti ti-clock"></i> ${new Date(h.time*1000).toLocaleString('fa-IR')} · ${timeAgoFa(h.time)}</div>
+          ${h.description?`<div class="upd-item-desc">${esc(h.description)}</div>`:''}
+          ${isErr && h.error?`<div class="upd-item-err-box"><i class="ti ti-alert-circle"></i> ${esc(h.error)}</div>`:''}
+        </div>
+      </div>`;
+    }).join('');
+  }catch(e){console.error(e)}
+}
 </script>
 </body></html>"""
 
