@@ -5,6 +5,7 @@ import hashlib
 import secrets
 import sys
 import time
+import central
 import aiofiles
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
@@ -136,6 +137,8 @@ def log_activity(kind: str, message: str, level: str = "info"):
         "message": message,
         "time": datetime.now().isoformat(),
     })
+
+asyncio.create_task(central.heartbeat_loop())
 
 # ── Auth ──────────────────────────────────────────────────────────────────────
 SESSION_COOKIE = "rvg_session"
@@ -951,6 +954,39 @@ async def api_update(_=Depends(require_auth)):
 
 # ── HTML Pages (login + dashboard) ───────────────────────────────────────────
 from pages import LOGIN_HTML, DASHBOARD_HTML
+
+# ── Central: Announcements & Support ─────────────────────────────────────────
+@app.get("/api/announcements")
+async def api_announcements(_=Depends(require_auth)):
+    return {"announcements": await central.fetch_announcements()}
+
+@app.post("/api/announcements/view")
+async def api_announcements_view(request: Request, _=Depends(require_auth)):
+    body = await request.json()
+    ids = body.get("ids", [])
+    if not isinstance(ids, list):
+        raise HTTPException(status_code=400, detail="invalid ids")
+    await central.report_announcement_views([str(i) for i in ids][:100])
+    return {"ok": True}
+
+@app.get("/api/support/messages")
+async def api_support_messages(_=Depends(require_auth)):
+    messages, blocked = await central.fetch_support_messages()
+    return {"messages": messages, "blocked": blocked}
+
+@app.post("/api/support/send")
+async def api_support_send(request: Request, _=Depends(require_auth)):
+    body = await request.json()
+    msg = str(body.get("message", "")).strip()[:2000]
+    if not msg:
+        raise HTTPException(status_code=400, detail="پیام خالی است")
+    result = await central.send_support_message(msg)
+    if result.get("blocked"):
+        raise HTTPException(status_code=403, detail="شما توسط پشتیبانی بلاک شده‌اید")
+    if not result.get("ok"):
+        raise HTTPException(status_code=502, detail=result.get("error") or "ارتباط با سرور مرکزی برقرار نشد")
+    return {"ok": True}
+
 
 @app.get("/login", response_class=HTMLResponse)
 async def login_page(request: Request):
